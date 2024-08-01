@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcular Edad y Mayoría de Edad</title>
+<script>
+    function calcularEdadYMayorEdad() {
+
+        var fechaNacimiento = new Date(document.getElementById("fechaNacimiento").value);
+        
+
+        var fechaActual = new Date();
+        
+
+        var edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+        
+
+        if (fechaNacimiento.getMonth() > fechaActual.getMonth() || (fechaNacimiento.getMonth() === fechaActual.getMonth() && fechaNacimiento.getDate() > fechaActual.getDate())) {
+            edad--;
+        }
+        
+    
+        document.getElementById("edad").innerHTML = "Edad: " + edad + " años";
+        
+      
+        if (edad >= 18) {
+            document.getElementById("mayoriaEdad").innerHTML = "La persona es mayor de edad";
+        } else {
+            document.getElementById("mayoriaEdad").innerHTML = "La persona es menor de edad";
+        }
+    }
+</script>
+</head>
+<body>
+
+<h2>Calcular Edad y Mayoría de Edad</h2>
+
+<label for="fechaNacimiento">Fecha de Nacimiento:</label>
+<input type="date" id="fechaNacimiento">
+
+<button onclick="calcularEdadYMayorEdad()">Calcular</button>
+
+<p id="edad"></p>
+<p id="mayoriaEdad"></p>
+
+</body>
+</html>

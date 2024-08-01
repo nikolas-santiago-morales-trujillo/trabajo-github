@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparar Áreas de Triángulos</title>
+<script>
+    function calcularAreaTriangulo(base, altura) {
+
+        return (base * altura) / 2;
+    }
+    
+    function compararAreas() {
+        
+        var base1 = parseFloat(document.getElementById("base1").value);
+        var altura1 = parseFloat(document.getElementById("altura1").value);
+        var base2 = parseFloat(document.getElementById("base2").value);
+        var altura2 = parseFloat(document.getElementById("altura2").value);
+        
+        
+        if (isNaN(base1) || isNaN(altura1) || isNaN(base2) || isNaN(altura2) || base1 <= 0 || altura1 <= 0 || base2 <= 0 || altura2 <= 0) {
+            alert("Por favor ingresa dimensiones válidas para los triángulos");
+            return;
+        }
+        
+       
+        var areaTriangulo1 = calcularAreaTriangulo(base1, altura1);
+        var areaTriangulo2 = calcularAreaTriangulo(base2, altura2);
+        
+
+        document.getElementById("area1").innerHTML = "Área del triángulo 1: " + areaTriangulo1.toFixed(2);
+        document.getElementById("area2").innerHTML = "Área del triángulo 2: " + areaTriangulo2.toFixed(2);
+        
+  
+        if (areaTriangulo1 > areaTriangulo2) {
+            document.getElementById("resultado").innerHTML = "El triángulo 1 es más grande";
+        } else if (areaTriangulo1 < areaTriangulo2) {
+            document.getElementById("resultado").innerHTML = "El triángulo 2 es más grande";
+        } else {
+            document.getElementById("resultado").innerHTML = "Ambos triángulos tienen el mismo tamaño";
+        }
+    }
+</script>
+</head>
+<body>
+
+<h2>Comparar Áreas de Triángulos</h2>
+
+<h3>Triángulo 1</h3>
+<label for="base1">Base:</label>
+<input type="number" id="base1">
+<label for="altura1">Altura:</label>
+<input type="number" id="altura1">
+
+<h3>Triángulo 2</h3>
+<label for="base2">Base:</label>
+<input type="number" id="base2">
+<label for="altura2">Altura:</label>
+<input type="number" id="altura2">
+
+<button onclick="compararAreas()">Comparar Áreas</button>
+
+<p id="area1"></p>
+<p id="area2"></p>
+<p id="resultado"></p>
+
+</body>
+</html>

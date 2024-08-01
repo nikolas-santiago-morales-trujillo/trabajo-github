@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabla de multiplicar del 5 con Buzz y Bass</title>
+</head>
+<body>
+
+<h1>Tabla de multiplicar del 5 con Buzz y Bass</h1>
+
+<table border="1">
+  <tr>
+    <th>Número</th>
+    <th>Resultado</th>
+    <th>Tipo</th>
+  </tr>
+  
+  <script>
+    
+    for (var numero = 1; numero <= 5; numero++) {
+      var resultado = 5 * numero;
+      var tipo = (resultado % 2 == 0) ? "Buzz" : "Bass"; 
+      document.write("<tr>");
+      document.write("<td>5 x " + numero + "</td>");
+      document.write("<td>" + resultado + "</td>");
+      document.write("<td>" + tipo + "</td>");
+      document.write("</tr>");
+    }
+  </script>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de salario</title>
+</head>
+<body>
+
+<h1>Calculadora de salario</h1>
+
+<script>
+  var diasTrabajados = 20; 
+  var valorDia = 10000; 
+  var salarioMinimo = 908526; 
+
+  var salario = diasTrabajados * valorDia; 
+
+ 
+  var salud = salario * 0.12;
+  var pension = salario * 0.10;
+  var arl = salario * 0.052;
+
+ 
+  var totalDescuentos = salud + pension + arl;
+
+ 
+  var subsidioTransporte = salario < (2 * salarioMinimo) ? 106454 : 0;
+
+  
+  var retencion = salario > (4 * salarioMinimo) ? salario * 0.0004 : 0;
+
+
+  var totalPagar = salario - totalDescuentos + subsidioTransporte - retencion;
+
+
+  document.write("<p>Salario: $" + salario.toFixed(2) + "</p>");
+  document.write("<p>Salud: $" + salud.toFixed(2) + "</p>");
+  document.write("<p>Pensión: $" + pension.toFixed(2) + "</p>");
+  document.write("<p>ARL: $" + arl.toFixed(2) + "</p>");
+  document.write("<p>Total de descuentos: $" + totalDescuentos.toFixed(2) + "</p>");
+  document.write("<p>Subsidio de transporte: $" + subsidioTransporte.toFixed(2) + "</p>");
+  document.write("<p>Retención: $" + retencion.toFixed(2) + "</p>");
+  document.write("<h2>Total a pagar: $" + totalPagar.toFixed(2) + "</h2>");
+</script>
+
+</body>
+</html>

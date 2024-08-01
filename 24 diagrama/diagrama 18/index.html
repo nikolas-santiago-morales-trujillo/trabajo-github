@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplicación hasta 5 y Clasificación Par/Buzz Impar/Bass</title>
+<script>
+    function multiplicarHastaCinco() {
+    
+        var resultado = 1;
+        
+     
+        var resultados = [];
+        
+       
+        for (var i = 1; i < 5; i++) {
+            resultado *= i;
+            if (i % 2 === 0) {
+                resultados.push("buzz");
+            } else {
+                resultados.push("bass");
+            }
+        }
+        
+       
+        document.getElementById("resultadoMultiplicacion").innerHTML = "El resultado de la multiplicación hasta 5 es: " + resultado;
+        
+      
+        document.getElementById("resultados").innerHTML = "Resultados: " + resultados.join(", ");
+    }
+</script>
+</head>
+<body>
+
+<h2>Multiplicación hasta 5 y Clasificación Par/Buzz Impar/Bass</h2>
+
+<button onclick="multiplicarHastaCinco()">Multiplicar hasta 5 y Clasificar</button>
+
+<p id="resultadoMultiplicacion"></p>
+<p id="resultados"></p>
+
+</body>
+</html>

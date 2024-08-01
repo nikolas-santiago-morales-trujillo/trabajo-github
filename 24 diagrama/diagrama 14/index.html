@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contador hasta 5</title>
+<script>
+    function contarHastaCinco() {
+
+        var contadorElemento = document.getElementById("contador");
+        
+        
+        var contador = 1;
+        
+      
+        function incrementarContador() {
+            contadorElemento.innerHTML = contador;
+            contador++;
+         
+
+            if (contador > 5) {
+                clearInterval(incrementar);
+            }
+        }
+        
+       
+        var incrementar = (incrementarContador, 10000 );
+    }
+</script>
+</head>
+<body>
+
+<h2>Contador hasta 5</h2>
+
+<button onclick="contarHastaCinco()">Comenzar Contador</button>
+
+<p id="contador"></p>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Factorial de 5</title>
+<script>
+    function calcularFactorial() {
+     
+        var numero = 5;
+        
+        
+        var factorial = 1;
+        
+     
+        for (var i = 1; i <= numero; i++) {
+            factorial *= i;
+        }
+        
+      
+        document.getElementById("resultado").innerHTML = "El factorial de " + numero + " es: " + factorial;
+    }
+</script>
+</head>
+<body>
+
+<h2>Factorial de 5</h2>
+
+<button onclick="calcularFactorial()">Calcular Factorial</button>
+
+<p id="resultado"></p>
+
+</body>
+</html>

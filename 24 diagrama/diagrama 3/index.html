@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcular Promedio de Tres Personas</title>
+<script>
+    function calcularPromedio() {
+       
+        var calificacion1 = parseFloat(document.getElementById("calificacion1").value);
+        var calificacion2 = parseFloat(document.getElementById("calificacion2").value);
+        var calificacion3 = parseFloat(document.getElementById("calificacion3").value);
+        
+       
+        if (isNaN(calificacion1) || isNaN(calificacion2) || isNaN(calificacion3)) {
+            alert("Por favor ingresa calificaciones válidas");
+            return;
+        }
+        
+        
+        var promedio = (calificacion1 + calificacion2 + calificacion3) / 3;
+        
+       
+        document.getElementById("resultado").innerHTML = "El promedio es: " + promedio.toFixed(2);
+    }
+</script>
+</head>
+<body>
+
+<h2>Calcular Promedio de Tres Personas</h2>
+
+<label for="calificacion1">Calificación de la persona 1:</label>
+<input type="number" id="calificacion1">
+
+<label for="calificacion2">Calificación de la persona 2:</label>
+<input type="number" id="calificacion2">
+
+<label for="calificacion3">Calificación de la persona 3:</label>
+<input type="number" id="calificacion3">
+
+<button onclick="calcularPromedio()">Calcular Promedio</button>
+
+<p id="resultado"></p>
+
+</body>
+</html>

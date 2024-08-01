@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcular Edad y Promedio</title>
+<script>
+    function calcularEdadYPromedio() {
+       
+        var fechaNacimiento1 = new Date(document.getElementById("fechaNacimiento1").value);
+        var fechaNacimiento2 = new Date(document.getElementById("fechaNacimiento2").value);
+        var fechaNacimiento3 = new Date(document.getElementById("fechaNacimiento3").value);
+        
+       
+        var fechaActual = new Date();
+       
+        var edad1 = fechaActual.getFullYear() - fechaNacimiento1.getFullYear();
+        var edad2 = fechaActual.getFullYear() - fechaNacimiento2.getFullYear();
+        var edad3 = fechaActual.getFullYear() - fechaNacimiento3.getFullYear();
+        
+      
+        var promedio = (edad1 + edad2 + edad3) / 3;
+        
+       
+        document.getElementById("edad1").innerHTML = "Edad persona 1: " + edad1 + " años";
+        document.getElementById("edad2").innerHTML = "Edad persona 2: " + edad2 + " años";
+        document.getElementById("edad3").innerHTML = "Edad persona 3: " + edad3 + " años";
+        document.getElementById("promedio").innerHTML = "Promedio de edades: " + promedio.toFixed(2) + " años";
+    }
+</script>
+</head>
+<body>
+
+<h2>Calcular Edad y Promedio</h2>
+
+<label for="fechaNacimiento1">Fecha de Nacimiento persona 1:</label>
+<input type="date" id="fechaNacimiento1">
+
+<label for="fechaNacimiento2">Fecha de Nacimiento persona 2:</label>
+<input type="date" id="fechaNacimiento2">
+
+<label for="fechaNacimiento3">Fecha de Nacimiento persona 3:</label>
+<input type="date" id="fechaNacimiento3">
+
+<button onclick="calcularEdadYPromedio()">Calcular</button>
+
+<p id="edad1"></p>
+<p id="edad2"></p>
+<p id="edad3"></p>
+<p id="promedio"></p>
+
+</body>
+</html>

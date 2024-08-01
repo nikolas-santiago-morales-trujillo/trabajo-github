@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bingo</title>
+  <link rel="stylesheet" href="bootstrap/js/bootstrap.js">
+  <script src="js/js.js"></script>
+
+  <style>
+    .bingo-cell {
+      width: 80px;
+      height: 80px;
+      font-size: 24px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+    .bingo-cell.marked {
+      background-color: #007bff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-center mb-4">Bingo</h2>
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <table id="bingoTable">
+              <thead>
+                <tr>
+                  <th class="bingo-cell">B</th>
+                  <th class="bingo-cell">I</th>
+                  <th class="bingo-cell">N</th>
+                  <th class="bingo-cell">G</th>
+                  <th class="bingo-cell">O</th>
+                </tr>
+              </thead>
+              <tbody id="bingoBody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row mt-4 justify-content-center">
+          <div class="col-auto">
+            <button id="resetButton" class="btn btn-primary">Reiniciar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .bingo-cell {
+      width: 80px;
+      height: 80px;
+      font-size: 24px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+    .bingo-cell.marked {
+      background-color: #007bff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-center mb-4">Bingo</h2>
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <table id="bingoTable">
+              <thead>
+                <tr>
+                  <th class="bingo-cell">B</th>
+                  <th class="bingo-cell">I</th>
+                  <th class="bingo-cell">N</th>
+                  <th class="bingo-cell">G</th>
+                  <th class="bingo-cell">O</th>
+                </tr>
+              </thead>
+              <tbody id="bingoBody2">
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row mt-4 justify-content-center">
+          <div class="col-auto">
+            <button id="resetButton" class="btn btn-primary">Reiniciar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <script src="bingo.js"></script>
+</body>
+</html>

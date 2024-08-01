@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restar dos Números</title>
+<script>
+    function restar() {
+       
+        var minuendo = parseFloat(document.getElementById("minuendo").value);
+        var sustraendo = parseFloat(document.getElementById("sustraendo").value);
+        
+       
+        if (isNaN(minuendo) || isNaN(sustraendo)) {
+            alert("Por favor ingresa números válidos");
+            return;
+        }
+        
+   
+        var resultado = minuendo - sustraendo;
+        
+       
+        document.getElementById("resultado").innerHTML = "El resultado de la resta es: " + resultado;
+    }
+</script>
+</head>
+<body>
+
+<h2>Restar dos Números</h2>
+
+<label for="minuendo">Minuendo:</label>
+<input type="number" id="minuendo">
+
+<label for="sustraendo">Sustraendo:</label>
+<input type="number" id="sustraendo">
+
+<button onclick="restar()">Restar</button>
+
+<p id="resultado"></p>
+
+</body>
+</html>

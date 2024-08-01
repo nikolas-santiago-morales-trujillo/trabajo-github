@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplicar dos Números</title>
+<script>
+    function multiplicar() {
+       
+        var num1 = parseFloat(document.getElementById("numero1").value);
+        var num2 = parseFloat(document.getElementById("numero2").value);
+        
+        
+        if (isNaN(num1) || isNaN(num2)) {
+            alert("Por favor ingresa números válidos");
+            return;
+        }
+        
+      
+        var resultado = num1 * num2;
+        
+    
+        document.getElementById("resultado").innerHTML = "El resultado de la multiplicación es: " + resultado;
+    }
+</script>
+</head>
+<body>
+
+<h2>Multiplicar dos Números</h2>
+
+<label for="numero1">Número 1:</label>
+<input type="number" id="numero1">
+
+<label for="numero2">Número 2:</label>
+<input type="number" id="numero2">
+
+<button onclick="multiplicar()">Multiplicar</button>
+
+<p id="resultado"></p>
+
+</body>
+</html>

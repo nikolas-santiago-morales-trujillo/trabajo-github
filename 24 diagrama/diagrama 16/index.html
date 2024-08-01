@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplicación hasta 5</title>
+<script>
+    function multiplicarHastaCinco() {
+   
+        var resultado = 1;
+        
+      
+        for (var i = 2; i < 5; i++) {
+            resultado *= i;
+        }
+        
+       
+        document.getElementById("resultado").innerHTML = "El resultado de la multiplicación hasta 5 es: " + resultado;
+    }
+</script>
+</head>
+<body>
+
+<h2>Multiplicación hasta 5</h2>
+
+<button onclick="multiplicarHastaCinco()">Multiplicar hasta 5</button>
+
+<p id="resultado"></p>
+
+</body>
+</html>

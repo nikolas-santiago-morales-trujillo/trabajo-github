@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcular Edad</title>
+<script>
+    function calcularEdad() {
+        
+        var fechaNacimiento = document.getElementById("fechaNacimiento").value;
+        
+      
+        var fechaNacimientoDate = new Date(fechaNacimiento);
+        
+       
+        var fechaActual = new Date();
+        
+       
+        var diferencia = fechaActual - fechaNacimientoDate;
+        
+        
+        var edad = Math.floor(diferencia / (1000 * 60 * 60 * 24 * 365.25)); 
+        
+        
+        document.getElementById("resultado").innerHTML = "La edad es: " + edad + " años";
+    }
+</script>
+</head>
+<body>
+
+<h2>Calcular Edad</h2>
+
+<label for="fechaNacimiento">Fecha de Nacimiento:</label>
+<input type="date" id="fechaNacimiento">
+
+<button onclick="calcularEdad()">Calcular Edad</button>
+
+<p id="resultado"></p>
+
+</body>
+</html>
